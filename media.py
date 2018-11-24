@@ -1,23 +1,36 @@
 class Media:
-    def __init__(self, type, title, tags):
-        self.__type = type
-        self.__title = title
-        self.__tags = tags
+    def __init__(self, media, title, location):
+        self.media = media
+        self.title = title
+        self.location = location
+        self.tags = []
 
-    def setType(self, type):
-        self.__type = type
+    def setType(self, media):
+        self.media = media
 
     def setTitle(self, title):
-        self.__title = title
+        self.title = title
 
-    def setTags(self, tag):
-        self.__tags.add(type)
+    def setTags(self, tags):
+        self.tags = tags
+
+    def setLocation(self, location):
+        self.location = location
+
+    def addTag(self, tag):
+        self.tags.append(tag)
 
     def getType(self):
-        return self.__type
+        return self.type
 
     def getTitle(self):
-        return self.__title
+        return self.title
 
     def getTags(self):
-        return self.__tags
+        return self.tags
+
+    def getLocation(self):
+        return self.location
+
+    def __str__(self):
+        return self.title
